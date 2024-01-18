@@ -1,0 +1,142 @@
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--very-light-grayish-blue);
+}
+
+.container {
+  margin: 2rem;
+  width: 700px;
+  background-color: var(--white);
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.notif_box {
+  display: flex;
+  align-items: center;
+}
+
+#notifications {
+  background-color: var(--blue);
+  margin-left: 0.5rem;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  color: var(--white);
+  font-weight: 800;
+  border-radius: 0.5rem;
+}
+
+#mark_all {
+  cursor: pointer;
+}
+
+#mark_all:hover {
+  color: var(--blue);
+}
+
+p {
+  color: var(--Dark-grayish-blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notif_card {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+img {
+  width: 50px;
+}
+
+.description {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+strong {
+  color: var(--Very-dark-blue);
+  cursor: pointer;
+}
+
+strong:hover {
+  color: var(--blue);
+}
+
+.unread {
+  background-color: var(--light-grayish-blue-1) !important;
+}
+
+.unread p:first-of-type::after {
+  content: "";
+  background-color: var(--red);
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.message_card {
+  display: flex;
+  align-items: center;
+}
+
+.message {
+  padding: 1rem;
+  border: 1px solid var(--light-grayish-blue-2);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin: 0 0 0 5rem;
+}
+
+.message:hover {
+  background-color: var(--light-grayish-blue-1);
+}
+
+.chess_img {
+  margin: auto;
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    margin: 0;
+  }
+}
